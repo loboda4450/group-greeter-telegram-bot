@@ -35,8 +35,6 @@ async def main(config):
     @client.on(event=events.ChatAction())
     async def status(event):
         if event.user_added or event.user_joined:
-            await event.reply(f"Witaj na grupce [{get_sender_name(event.user)}](tg://user?id={event.user.id}) ,"
-                              f" przeczytaj przypięty post i ciesz się z pobytu.\n\nA, i coś w gratisie:")
             await event.reply("https://www.deezer.com/track/1357553832")
 
     async with client:
